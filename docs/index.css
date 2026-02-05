@@ -284,6 +284,15 @@ body {
 	color: var(--muted);
 }
 
+.contact a {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.contact a:hover {
+	color: var(--primary-color);
+}
+
 /* Quote Section */
 .cart {
 	max-width: 1200px;
