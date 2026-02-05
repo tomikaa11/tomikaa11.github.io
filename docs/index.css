@@ -22,6 +22,15 @@ body {
 	background-color: var(--bg);
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+section {
+	scroll-margin-top: 80px;
+}
+
 .navbar {
 	background: var(--panel);
 	box-shadow: var(--shadow);
