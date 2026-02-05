@@ -105,6 +105,14 @@ body {
 .nav-link-btn:hover {
 	background: rgba(255,255,255,0.04);
 }
+.nav-link,
+.nav-link-btn {
+	text-decoration: none !important;
+}
+
+.nav-link-btn::after {
+	display: none !important;
+}
 
 .hamburger {
 	display: none;
