@@ -11,7 +11,7 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="#home" class="logo-link" aria-label="SHADOW home" onclick="location.reload(); return false;">
+                <a href="#home" class="logo-link" aria-label="SHADOW home" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => location.reload(), 200); return false;">
                     <span class="logo-text">💻 SHADOW</span>
                 </a>
             </div>
