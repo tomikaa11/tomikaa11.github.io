@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Chatbot widget
+// Chatbot
 const chatbotToggle = document.querySelector('.chatbot-toggle');
 const chatbotPanel = document.querySelector('.chatbot-panel');
 const chatbotClose = document.querySelector('.chatbot-close');
