@@ -136,6 +136,23 @@ Számunkra minden projekt egyedi. Nincsenek sablonmegoldások — csak az Ön ig
             </div>
         </div>
     </footer>
+      <div class="chatbot" aria-live="polite">
+        <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel">
+            💬
+            <span class="chatbot-toggle-text">Kérdésed van?</span>
+        </button>
+        <div id="chatbot-panel" class="chatbot-panel" role="dialog" aria-label="SHADOW chatbot" aria-hidden="true">
+            <div class="chatbot-header">
+                <span>SHADOW Chat</span>
+                <button class="chatbot-close" type="button" aria-label="Bezárás">×</button>
+            </div>
+            <div class="chatbot-messages" role="log"></div>
+            <form class="chatbot-form" autocomplete="off">
+                <input class="chatbot-input" type="text" name="message" placeholder="Írd be a kérdésed..." required />
+                <button class="chatbot-send" type="submit">Küldés</button>
+            </form>
+        </div>
+    </div>
     
     <script src="index.js"></script>
 </body>
