@@ -50,23 +50,23 @@ const chatbotMessages = document.querySelector('.chatbot-messages');
 
 const chatbotReplies = [
     {
-        keywords: ['ár', 'árajánlat', 'költség', 'díj', 'csomag'],
-        reply: 'Az árajánlatot a projekt részletei alapján készítjük. Írd meg az igényeidet, és 48 órán belül visszajelzünk.'
+        keywords: ['ár', 'árajánlat', 'költség', 'díj', 'csomag', 'árak',],
+        reply: 'Az árajánlatot a projekt részletei alapján készítjük. Írd meg az igényeidet, és 24 órán belül visszajelzünk.'
     },
     {
         keywords: ['webshop', 'bolt', 'e-kereskedelem'],
         reply: 'Webshopot is készítünk: termékkezelés, fizetés, szállítási beállítások és admin felület is megoldható.'
     },
     {
-        keywords: ['idő', 'határidő', 'mennyi', 'mikor'],
+        keywords: ['idő', 'határidő', 'mennyi', 'mikor', 'kész', 'készen lesz', 'mennyi idő', 'mennyi idő alatt', 'mennyi időt vesz igénybe'],
         reply: 'A legtöbb projekt 1–4 hét alatt készül el a terjedelemtől és az anyagok rendelkezésre állásától függően.'
     },
     {
-        keywords: ['karbantartás', 'frissítés', 'támogatás'],
+        keywords: ['karbantartás', 'frissítés', 'támogatás', 'utólagos', 'utólag', 'később', 'későbbi', 'későbbiekben', 'későbbiek', 'későbbiekben is', 'későbbiekben is vállalunk', 'későbbiekben is tudunk', 'későbbiekben is biztosítunk'],
         reply: 'Vállalunk karbantartást, frissítést és folyamatos támogatást is.'
     },
     {
-        keywords: ['kapcsolat', 'email', 'telefon'],
+        keywords: ['kapcsolat', 'email', 'telefon', 'elérhetőség', 'hogyan', 'hogy', 'hol', 'milyen módon', 'milyen úton', 'elérhetőségek', 'elérhetőségeitek', 'elérhetőségeink', 'elérhetőségeinket', 'elérhetőségeinkre', 'elérhetőségeinket megadnátok', 'elérhetőségeinket megadnád', 'elérhetőségeinket megadnátok', 'elérhetőségeinket megadnád,'],
         reply: 'Írj a shadowwsite@gmail.com címre, vagy hagyd itt a kérdésed, és visszajelzünk.'
     }
 ];
