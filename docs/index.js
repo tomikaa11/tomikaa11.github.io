@@ -7,7 +7,7 @@ if (hamburger && navMenu) {
         navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
+    
     document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
@@ -40,7 +40,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Chatbot
+
 const chatbotToggle = document.querySelector('.chatbot-toggle');
 const chatbotPanel = document.querySelector('.chatbot-panel');
 const chatbotClose = document.querySelector('.chatbot-close');
