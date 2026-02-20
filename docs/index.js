@@ -87,6 +87,24 @@ const getChatbotReply = (input) => {
     return 'Köszönöm a kérdést! Írd le röviden az igényt, és hamarosan válaszolunk.';
 };
 
+// Kérdés elküldése emailben
+const sendQuestionToEmail = (question) => {
+    const now = new Date().toLocaleString('hu-HU');
+    fetch('https://formsubmit.co/ajax/shadowwsite@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            _subject: '🤖 Új chatbot kérdés',
+            Időpont: now,
+            Kérdés: question,
+            Oldal: window.location.href
+        })
+    }).catch(err => console.log('Email küldés:', err));
+};
+
 const openChatbot = () => {
     if (!chatbotPanel || !chatbotToggle) return;
     chatbotPanel.classList.add('is-open');
@@ -127,6 +145,10 @@ if (chatbotForm && chatbotInput) {
         event.preventDefault();
         const userText = chatbotInput.value.trim();
         if (!userText) return;
+        
+        // Kérdés elküldése emailben
+        sendQuestionToEmail(userText);
+        
         addMessage(userText, 'user');
         chatbotInput.value = '';
         const reply = getChatbotReply(userText);
