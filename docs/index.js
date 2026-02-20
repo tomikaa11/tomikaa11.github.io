@@ -71,13 +71,37 @@ const chatbotReplies = [
     }
 ];
 
-const addMessage = (text, type) => {
+// Kérdések tárolása
+const saveChatHistory = () => {
+    const messages = Array.from(chatbotMessages.children).map(msg => ({
+        text: msg.textContent,
+        type: msg.classList.contains('user') ? 'user' : 'bot'
+    }));
+    localStorage.setItem('shadowChatHistory', JSON.stringify(messages));
+};
+
+const loadChatHistory = () => {
+    const history = localStorage.getItem('shadowChatHistory');
+    if (history) {
+        const messages = JSON.parse(history);
+        messages.forEach(msg => {
+            addMessageWithoutSave(msg.text, msg.type);
+        });
+    }
+};
+
+const addMessageWithoutSave = (text, type) => {
     if (!chatbotMessages) return;
     const message = document.createElement('div');
     message.classList.add('chatbot-message', type);
     message.textContent = text;
     chatbotMessages.appendChild(message);
     chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+};
+
+const addMessage = (text, type) => {
+    addMessageWithoutSave(text, type);
+    saveChatHistory();
 };
 
 const getChatbotReply = (input) => {
