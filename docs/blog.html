@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SHADOWWSITE</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px 0;
+        }
+
+        .blog-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .blog-header p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .blog-posts {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .blog-post {
+            background: var(--panel);
+            border-radius: 8px;
+            padding: 30px;
+            border-left: 4px solid var(--primary-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .blog-post-date {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-post h2 {
+            color: var(--white);
+            font-size: 24px;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .blog-post p {
+            color: var(--text-color);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: var(--white);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--muted);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .blog-empty {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--muted);
+        }
+
+        .blog-empty p {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .blog-header h1 {
+                font-size: 28px;
+            }
+
+            .blog-post {
+                padding: 20px;
+            }
+
+            .blog-post h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="index.html" class="logo-link" aria-label="SHADOW home">
+                    <span class="logo-text">SHADOWWSITE</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">Kezdőlap</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Szolgáltatások</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link">Rólunk</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#portfolio" class="nav-link">Portfólió</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link">Kapcsolat</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link nav-link-btn">Blog</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="blog-container">
+        <a href="index.html" class="back-link">← Vissza a főoldalra</a>
+        
+        <div class="blog-header">
+            <h1>SHADOW Blog</h1>
+            <p>Tippek, trendek és tudás a webfejlesztés világából</p>
+        </div>
+
+        <div class="blog-posts">
+            <article class="blog-post">
+                <div class="blog-post-date">2026. február 22.</div>
+                <h2>Miért fontos a mobilbarát weboldal?</h2>
+                <p>A mai felhasználók többsége mobilről böngészi az internetetet. A statisztikák azt mutatják, hogy az internetes forgalom 60-70%-a mobil eszközökről érkezik. Ennek megfelelően a weboldal tervezésénél azt kell elsősorban figyelembe venni, hogy a felhasználók mobil telefonról érkeznek.</p>
+                <p>A mobilbarát weboldal nem csupán esztétikailag fontos, hanem a keresőmotorok (Google) is preferálják az olyan oldalakat, amelyek jól működnek kis képernyőkön. Ezt az úgynevezett "mobile-first indexing" szolgáltatás alatt értjük.</p>
+                <div class="blog-post-meta">
+                    <span>📝 5 perc olvasás</span>
+                    <span>👤 SHADOW csapat</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-date">2026. február 15.</div>
+                <h2>SEO alapok: Hogyan javítsd meg a keresőmotor-rangsorolásod</h2>
+                <p>A Search Engine Optimization (SEO) azon technikák összessége, amelyekkel a weboldalad jobb pozíciót érhet el a Google keresési eredményeiben. Ez nem csak a nagyobb vállalatok feladata – a kisvállalkozások és magánszemélyek számára még inkább kritikus lehet.</p>
+                <p>Az alapvető SEO elemek közé tartozik a megfelelő kulcsszóhasználat, a meta description optimalizálása, az oldal betöltési sebességének javítása, valamint a backlinlek szerzése. Ezen faktorok kombinálásával lépésenként emelkedhet az oldal láthatósága a keresőmotorban.</p>
+                <div class="blog-post-meta">
+                    <span>📝 8 perc olvasás</span>
+                    <span>👤 SHADOW csapat</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-date">2026. február 8.</div>
+                <h2>A weboldalad betöltési sebessége kritikus</h2>
+                <p>Az internethasználók türelmetlenek. Ha egy oldal több mint 3 másodpercig betöltődik, a látogatók nagy valószínűséggel elhagyják az oldalt. Ez közvetlenül befolyásolja a konverziót és a keresőmotorban való rangsorolást is.</p>
+                <p>A weboldal sebessége számos faktortól függ: a képek optimalizálása, a kód minimalizálása, a cache kezelés, valamint a hosting minősége. Ezért fontos, hogy a webfejlesztő ezeket az elemeket már a tervezés szakaszában figyelembe vegye.</p>
+                <div class="blog-post-meta">
+                    <span>📝 6 perc olvasás</span>
+                    <span>👤 SHADOW csapat</span>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <div class="blog-post-date">2026. január 30.</div>
+                <h2>Weboldal biztonsága: Mit kell tudnod a SSL tanúsítványról?</h2>
+                <p>Az SSL tanúsítvány már nem luxus, hanem szükséglet. Biztosítja az adatszállítás titkosítottságát a felhasználó böngészője és a szerver között. A Google 2018 óta az összes HTTP oldalt "nem biztonságos"-nak jelöli.</p>
+                <p>A SHADOW oldalain segítünk kiválasztani és beállítani az Ön weboldalához szükséges SSL tanúsítványt, hogy ügyfeleink információja mindig védett maradjon.</p>
+                <div class="blog-post-meta">
+                    <span>📝 7 perc olvasás</span>
+                    <span>👤 SHADOW csapat</span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-legal">
+                <a href="aszf.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">ÁSZF</a>
+                <a href="adatvedelmi.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Adatvédelmi szerződés</a>
+            </div>
+            <p>&copy; 2026 copyright SHADOW. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61587769874126" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+                    📘
+                </a>
+                <a href="https://www.instagram.com/shadowwsite" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    📷
+                </a>
+                <a href="blog.html" class="social-link" aria-label="Blog">
+                    📝
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
