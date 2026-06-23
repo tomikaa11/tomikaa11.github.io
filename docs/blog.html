@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - SHADOWWSITE</title>
+    <meta name="description" content="Szakmai cikkek, tippek és trendek a modern webfejlesztés, SEO és reszponzív webdesign világából.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="index.css">
     <style>
         .blog-container {
             max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
+            margin: 40px auto;
+            padding: 0 24px;
         }
 
         .blog-header {
@@ -19,9 +22,14 @@
         }
 
         .blog-header h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+            font-family: var(--font-title);
+            font-size: 42px;
+            font-weight: 850;
+            margin-bottom: 12px;
             color: var(--white);
+            background: linear-gradient(135deg, #ffffff 50%, var(--primary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .blog-header p {
@@ -37,37 +45,44 @@
 
         .blog-post {
             background: var(--panel);
-            border-radius: 8px;
-            padding: 30px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 18px;
+            padding: 36px;
+            border: 1px solid var(--border);
             border-left: 4px solid var(--primary-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
+            transform: translateY(-4px);
+            border-color: rgba(139, 92, 246, 0.2);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.6), var(--glow-shadow);
         }
 
         .blog-post-date {
             color: var(--primary-color);
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .blog-post h2 {
+            font-family: var(--font-title);
             color: var(--white);
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 26px;
+            font-weight: 750;
+            margin-bottom: 16px;
             line-height: 1.3;
         }
 
         .blog-post p {
             color: var(--text-color);
-            line-height: 1.8;
-            margin-bottom: 15px;
+            line-height: 1.75;
+            margin-bottom: 16px;
+            font-size: 15px;
         }
 
         .blog-post-meta {
@@ -75,7 +90,9 @@
             gap: 20px;
             color: var(--muted);
             font-size: 14px;
-            margin-top: 20px;
+            margin-top: 24px;
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
         }
 
         .read-more {
@@ -92,38 +109,32 @@
         }
 
         .back-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             margin-bottom: 30px;
             color: var(--muted);
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s ease;
+            font-size: 15px;
+            gap: 6px;
         }
 
         .back-link:hover {
-            color: var(--primary-color);
-        }
-
-        .blog-empty {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--muted);
-        }
-
-        .blog-empty p {
-            font-size: 18px;
+            color: var(--white);
         }
 
         @media (max-width: 768px) {
             .blog-header h1 {
-                font-size: 28px;
+                font-size: 32px;
             }
 
             .blog-post {
-                padding: 20px;
+                padding: 24px;
             }
 
             .blog-post h2 {
-                font-size: 20px;
+                font-size: 22px;
             }
         }
     </style>
@@ -156,7 +167,7 @@
                     <a href="blog.html" class="nav-link nav-link-btn">Blog</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Menü megnyitása" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -168,7 +179,7 @@
         <a href="index.html" class="back-link">← Vissza a főoldalra</a>
         
         <div class="blog-header">
-            <h1>SHADOW Blog</h1>
+            <h1>SHADOWWSITE Blog</h1>
             <p>Tippek, trendek és tudás a webfejlesztés világából</p>
         </div>
 
@@ -180,7 +191,7 @@
                 <p>A mobilbarát weboldal nem csupán esztétikailag fontos, hanem a keresőmotorok (Google) is preferálják az olyan oldalakat, amelyek jól működnek kis képernyőkön. Ezt az úgynevezett "mobile-first indexing" szolgáltatás alatt értjük.</p>
                 <div class="blog-post-meta">
                     <span>📝 5 perc olvasás</span>
-                    <span>👤 SHADOW csapat</span>
+                    <span>👤 SHADOWWSITE csapat</span>
                 </div>
             </article>
 
@@ -191,7 +202,7 @@
                 <p>Az alapvető SEO elemek közé tartozik a megfelelő kulcsszóhasználat, a meta description optimalizálása, az oldal betöltési sebességének javítása, valamint a backlinlek szerzése. Ezen faktorok kombinálásával lépésenként emelkedhet az oldal láthatósága a keresőmotorban.</p>
                 <div class="blog-post-meta">
                     <span>📝 8 perc olvasás</span>
-                    <span>👤 SHADOW csapat</span>
+                    <span>👤 SHADOWWSITE csapat</span>
                 </div>
             </article>
 
@@ -202,7 +213,7 @@
                 <p>A weboldal sebessége számos faktortól függ: a képek optimalizálása, a kód minimalizálása, a cache kezelés, valamint a hosting minősége. Ezért fontos, hogy a webfejlesztő ezeket az elemeket már a tervezés szakaszában figyelembe vegye.</p>
                 <div class="blog-post-meta">
                     <span>📝 6 perc olvasás</span>
-                    <span>👤 SHADOW csapat</span>
+                    <span>👤 SHADOWWSITE csapat</span>
                 </div>
             </article>
 
@@ -210,10 +221,10 @@
                 <div class="blog-post-date">2026. január 30.</div>
                 <h2>Weboldal biztonsága: Mit kell tudnod a SSL tanúsítványról?</h2>
                 <p>Az SSL tanúsítvány már nem luxus, hanem szükséglet. Biztosítja az adatszállítás titkosítottságát a felhasználó böngészője és a szerver között. A Google 2018 óta az összes HTTP oldalt "nem biztonságos"-nak jelöli.</p>
-                <p>A SHADOW oldalain segítünk kiválasztani és beállítani az Ön weboldalához szükséges SSL tanúsítványt, hogy ügyfeleink információja mindig védett maradjon.</p>
+                <p>A SHADOWWSITE oldalain segítünk kiválasztani és beállítani az Ön weboldalához szükséges SSL tanúsítványt, hogy ügyfeleink információja mindig védett maradjon.</p>
                 <div class="blog-post-meta">
                     <span>📝 7 perc olvasás</span>
-                    <span>👤 SHADOW csapat</span>
+                    <span>👤 SHADOWWSITE csapat</span>
                 </div>
             </article>
         </div>
@@ -225,7 +236,7 @@
                 <a href="aszf.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">ÁSZF</a>
                 <a href="adatvedelmi.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Adatvédelmi szerződés</a>
             </div>
-            <p>&copy; 2026 copyright SHADOW. All rights reserved.</p>
+            <p>&copy; 2026 copyright SHADOWWSITE. All rights reserved.</p>
             <div class="social-links">
                 <a href="https://www.facebook.com/profile.php?id=61587769874126" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
                     📘

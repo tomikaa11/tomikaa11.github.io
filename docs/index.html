@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHADOWWSITE</title>
+    <title>SHADOWWSITE | Modern Weboldalak & Webfejlesztés</title>
+    <meta name="description" content="Egyedi tervezésű, gyors és mobilbarát weboldalak és webshopok készítése és karbantartása. Fiatalos, Z-generációs lendülettel.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -22,13 +25,12 @@
                 <li class="nav-item">
                     <a href="#services" class="nav-link">Szolgáltatások</a>
                 </li>
-                       <li class="nav-item">
+                <li class="nav-item">
                     <a href="#about" class="nav-link">Rólunk</a>
                 </li>
                 <li class="nav-item">
                     <a href="#portfolio" class="nav-link">Portfólió</a>
                 </li>
-        
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Kapcsolat</a>
                 </li>
@@ -36,7 +38,7 @@
                     <a href="#pricing" class="nav-link nav-link-btn">Áraink</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" aria-label="Menü megnyitása" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -50,9 +52,10 @@
                 SHADOWWSITE</h1>
             <p>Modern, gyors és mobilbarát weboldalak — magánszemélyeknek, kisvállalkozásoknak, cégeknek.</p>
             <p class="hero-subtitle">Egyedi dizájn, átlátható fejlesztés, megbízható karbantartás</p>
-
-
-            <a href="#contact" class="cta-button">Kérj árajánlatot</a>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">Kérj árajánlatot</a>
+                <a href="#services" class="cta-secondary">Szolgáltatások</a>
+            </div>
         </div>
     </section>
 
@@ -91,7 +94,7 @@
                     <li>Alap SEO beállítások</li>
                 </ul>
             </div>
-            <div class="product-card">
+            <div class="product-card popular">
                 <div class="product-image">✨</div>
                 <h3>Business</h3>
                 <div class="price">149 000 Ft-tól</div>
@@ -136,25 +139,89 @@
         </div>
     </section>
 
-    <section id="about" class="about">
-        <h2>Rólunk</h2>
-        <p> Z generációs fiatal csapatként pontosan értjük a mai digitális világ gyors változásait, az aktuális trendeket és azt, hogyan gondolkodnak a modern felhasználók.
-Az első beszélgetéstől a kész weboldalig végigkísérjük ügyfeleinket, hogy elképzeléseik valódi, működő megoldásokká formálódjanak. 
-Munkánk alapja az átlátható folyamat és az ügyfélközpontú kommunikáció. Fontos számunkra, hogy minden lépés érthető, követhető és kiszámítható legyen.
-A tervezés során kiemelt figyelmet fordítunk a letisztult megjelenésre, a logikus felépítésre és a gyors, felhasználóbarát működésre. Fiatal, lendületes szemléletünk ötvözi a kreativitást a tudatos tervezéssel, így weboldalaink nemcsak esztétikusak, hanem hatékonyak is.
-Számunkra minden projekt egyedi.</p>
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text-content">
+                <h2>Rólunk</h2>
+                <p>Z generációs fiatal csapatként pontosan értjük a mai digitális világ gyors változásait, az aktuális trendeket és azt, hogyan gondolkodnak a modern felhasználók.</p>
+                <p>Az első beszélgetéstől a kész weboldalig végigkísérjük ügyfeleinket, hogy elképzeléseik valódi, működő megoldásokká formálódjanak. Munkánk alapja az átlátható folyamat és az ügyfélközpontú kommunikáció.</p>
+                <p>A tervezés során kiemelt figyelmet fordítunk a letisztult megjelenésre, a logikus felépítésre és a gyors, felhasználóbarát működésre. Fiatalos, lendületes szemléletünk ötvözi a kreativitást a tudatos tervezéssel, így weboldalaink nemcsak esztétikusak, hanem hatékonyak is.</p>
+            </div>
+            
+            <div class="about-highlights">
+                <div class="highlight-box">
+                    <div class="highlight-icon">⚡</div>
+                    <div>
+                        <h3>Z-Generációs lendület</h3>
+                        <p>A legújabb trendek és technológiák naprakész alkalmazása.</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">🤝</div>
+                    <div>
+                        <h3>Transzparens folyamat</h3>
+                        <p>Minden lépés érthető, követhető és kiszámítható az elejétől a végéig.</p>
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">💎</div>
+                    <div>
+                        <h3>Egyedi dizájn</h3>
+                        <p>Nincsenek sablonok, minden oldalt a te márkádra szabunk.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Kapcsolat</h2>
-            <p>
-                E-mail: <a href="mailto:shadowwsite@gmail.com">shadowwsite@gmail.com</a>
-                | Több: <a href="#" onclick="openChatbot(); return false;">Csevegj az élő chatbotunkkal!</a>
-            </p>
-            <p>Küldj e-mailt az igényeiddel, és 24 órán belül visszajelzünk.</p>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Kapcsolat</h2>
+                <p class="contact-description">Küldj e-mailt az igényeiddel, vagy töltsd ki az űrlapot, és 24 órán belül válaszolunk.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>E-mail címünk</h4>
+                            <a href="mailto:shadowwsite@gmail.com">shadowwsite@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h4>Gyors segítség</h4>
+                            <a href="#" onclick="openChatbot(); return false;">Csevegj az élő chatbotunkkal!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <form action="https://formsubmit.co/shadowwsite@gmail.com" method="POST" class="contact-form">
+                    <input type="hidden" name="_subject" value="✉️ Új üzenet a SHADOWWSITE weboldalról">
+                    <input type="hidden" name="_next" value="https://tomikaa11.github.io/docs/index.html">
+                    
+                    <div class="form-group">
+                        <label for="form-name">Név</label>
+                        <input type="text" id="form-name" name="name" placeholder="Kovács János" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-email">E-mail cím</label>
+                        <input type="email" id="form-email" name="email" placeholder="janos@pelda.hu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message">Üzenet / Igények</label>
+                        <textarea id="form-message" name="message" rows="4" placeholder="Írd le röviden a projektet..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Üzenet küldése</button>
+                </form>
+            </div>
+        </div>
     </section>
     
-  <footer class="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-legal">
                 <a href="aszf.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">ÁSZF</a>
@@ -175,7 +242,7 @@ Számunkra minden projekt egyedi.</p>
         </div>
     </footer>
 
-      <div class="chatbot" aria-live="polite">
+    <div class="chatbot" aria-live="polite">
         <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel">
             💬
             <span class="chatbot-toggle-text">Kérdésed van?</span>
