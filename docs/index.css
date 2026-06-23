@@ -188,6 +188,37 @@ section {
 	display: none !important;
 }
 
+.lang-toggle-btn {
+	background: rgba(255, 255, 255, 0.05) !important;
+	color: var(--white) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	padding: 10px 18px !important;
+	border-radius: 30px !important;
+	font-weight: 600 !important;
+	cursor: pointer;
+	font-family: var(--font-body);
+	font-size: 14px;
+	transition: all 0.3s ease !important;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.lang-toggle-btn:hover {
+	background: rgba(255, 255, 255, 0.12) !important;
+	border-color: rgba(255, 255, 255, 0.25) !important;
+	transform: translateY(-1px);
+}
+
+.lang-icon {
+	opacity: 0.8;
+	transition: transform 0.3s ease;
+}
+
+.lang-toggle-btn:hover .lang-icon {
+	transform: rotate(15deg);
+}
+
 .hamburger {
 	display: none;
 	flex-direction: column;
@@ -1072,6 +1103,11 @@ section {
 
 	.nav-link::after {
 		display: none;
+	}
+
+	.lang-toggle-btn {
+		padding: 12px 28px !important;
+		font-size: 15px;
 	}
 
 	.hamburger {

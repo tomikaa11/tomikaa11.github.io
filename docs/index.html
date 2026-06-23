@@ -20,22 +20,32 @@
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Kezdőlap</a>
+                    <a href="#home" class="nav-link" data-i18n="nav-home">Kezdőlap</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Szolgáltatások</a>
+                    <a href="#services" class="nav-link" data-i18n="nav-services">Szolgáltatások</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">Rólunk</a>
+                    <a href="#about" class="nav-link" data-i18n="nav-about">Rólunk</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#portfolio" class="nav-link">Portfólió</a>
+                    <a href="#portfolio" class="nav-link" data-i18n="nav-portfolio">Portfólió</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Kapcsolat</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav-contact">Kapcsolat</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#pricing" class="nav-link nav-link-btn">Áraink</a>
+                    <a href="#pricing" class="nav-link nav-link-btn" data-i18n="nav-pricing">Áraink</a>
+                </li>
+                <li class="nav-item">
+                    <button class="lang-toggle-btn" aria-label="Nyelvváltás / Language switch" onclick="toggleLanguage()">
+                        <svg class="lang-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        <span class="lang-text">EN</span>
+                    </button>
                 </li>
             </ul>
             <div class="hamburger" aria-label="Menü megnyitása" role="button" tabindex="0">
@@ -48,99 +58,99 @@
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Modern weboldalak, amelyek kiemelnek az online térben<br>
+            <h1 data-i18n="hero-title">Modern weboldalak, amelyek kiemelnek az online térben<br>
                 SHADOWWSITE</h1>
-            <p>Modern, gyors és mobilbarát weboldalak — magánszemélyeknek, kisvállalkozásoknak, cégeknek.</p>
-            <p class="hero-subtitle">Egyedi dizájn, átlátható fejlesztés, megbízható karbantartás</p>
+            <p data-i18n="hero-desc">Modern, gyors és mobilbarát weboldalak — magánszemélyeknek, kisvállalkozásoknak, cégeknek.</p>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Egyedi dizájn, átlátható fejlesztés, megbízható karbantartás</p>
             <div class="hero-buttons">
                 <a href="#contact" class="cta-button">
-                    <span>Kérj árajánlatot</span>
+                    <span data-i18n="hero-cta-primary">Kérj árajánlatot</span>
                     <svg class="cta-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                         <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                 </a>
-                <a href="#services" class="cta-secondary">Szolgáltatások</a>
+                <a href="#services" class="cta-secondary" data-i18n="hero-cta-secondary">Szolgáltatások</a>
             </div>
         </div>
     </section>
 
     <section id="services" class="products-preview">
-        <h2>Szolgáltatások</h2>
+        <h2 data-i18n="services-title">Szolgáltatások</h2>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image">🧩</div>
-                <h3>Weboldal készítés</h3>
-                <p>Reszponzív, Modern és gyors weboldalak egyedi igényekre.</p>
+                <h3 data-i18n="service-1-title">Weboldal készítés</h3>
+                <p data-i18n="service-1-desc">Reszponzív, Modern és gyors weboldalak egyedi igényekre.</p>
             </div>
             <div class="product-card">
                 <div class="product-image">🛒</div>
-                <h3>Webshopok</h3>
-                <p>Teljes körű e-kereskedelmi megoldások, biztonságos fizetéssel.</p>
+                <h3 data-i18n="service-2-title">Webshopok</h3>
+                <p data-i18n="service-2-desc">Teljes körű e-kereskedelmi megoldások, biztonságos fizetéssel.</p>
             </div>
             <div class="product-card">
                 <div class="product-image">⚙️</div>
-                <h3>Karbantartás</h3>
-                <p>Frissítések, biztonsági mentések és folyamatos támogatás.</p>
+                <h3 data-i18n="service-3-title">Karbantartás</h3>
+                <p data-i18n="service-3-desc">Frissítések, biztonsági mentések és folyamatos támogatás.</p>
             </div>
         </div>
     </section>
 
     <section id="pricing" class="products-preview pricing">
-        <h2>Áraink</h2>
-        <p class="pricing-subtitle">Átlátható csomagok, rugalmas bővítési lehetőségekkel.</p>
+        <h2 data-i18n="pricing-title">Áraink</h2>
+        <p class="pricing-subtitle" data-i18n="pricing-subtitle">Átlátható csomagok, rugalmas bővítési lehetőségekkel.</p>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image">🚀</div>
-                <h3>Start</h3>
-                <div class="price">100 000 Ft-tól</div>
+                <h3 data-i18n="price-1-title">Start</h3>
+                <div class="price" data-i18n="price-1-val">100 000 Ft-tól</div>
                 <ul class="price-features">
-                    <li>1-3 oldalas bemutatkozó oldal</li>
-                    <li>Mobilbarát, gyors betöltés</li>
-                    <li>Alap SEO beállítások</li>
+                    <li data-i18n="price-1-f1">1-3 oldalas bemutatkozó oldal</li>
+                    <li data-i18n="price-1-f2">Mobilbarát, gyors betöltés</li>
+                    <li data-i18n="price-1-f3">Alap SEO beállítások</li>
                 </ul>
             </div>
             <div class="product-card popular">
                 <div class="product-image">✨</div>
-                <h3>Business</h3>
-                <div class="price">149 000 Ft-tól</div>
+                <h3 data-i18n="price-2-title">Business</h3>
+                <div class="price" data-i18n="price-2-val">149 000 Ft-tól</div>
                 <ul class="price-features">
-                    <li>5-8 aloldal, egyedi dizájn</li>
-                    <li>Kapcsolati űrlap és térkép</li>
-                    <li>Adminisztrációs útmutató</li>
+                    <li data-i18n="price-2-f1">5-8 aloldal, egyedi dizájn</li>
+                    <li data-i18n="price-2-f2">Kapcsolati űrlap és térkép</li>
+                    <li data-i18n="price-2-f3">Adminisztrációs útmutató</li>
                 </ul>
             </div>
             <div class="product-card">
                 <div class="product-image">🏆</div>
-                <h3>Premium</h3>
-                <div class="price">299 000 Ft-tól</div>
+                <h3 data-i18n="price-3-title">Premium</h3>
+                <div class="price" data-i18n="price-3-val">299 000 Ft-tól</div>
                 <ul class="price-features">
-                    <li>Teljes arculati tervezés</li>
-                    <li>Komplex funkciók és integrációk</li>
-                    <li>Prémium karbantartási opciók</li>
+                    <li data-i18n="price-3-f1">Teljes arculati tervezés</li>
+                    <li data-i18n="price-3-f2">Komplex funkciók és integrációk</li>
+                    <li data-i18n="price-3-f3">Prémium karbantartási opciók</li>
                 </ul>
             </div>
         </div>
-        <p class="pricing-note">Az árak tájékoztató jellegűek, pontos árajánlatot az igények alapján adunk.</p>
+        <p class="pricing-note" data-i18n="pricing-note">Az árak tájékoztató jellegűek, pontos árajánlatot az igények alapján adunk.</p>
     </section>
 
     <section id="portfolio" class="products-preview">
-        <h2>Portfólió</h2>
+        <h2 data-i18n="portfolio-title">Portfólió</h2>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image">🌐</div>
-                <h3>Vállalati weboldal</h3>
-                <p>Bemutató oldal nagyvállalati stílusban.</p>
+                <h3 data-i18n="port-1-title">Vállalati weboldal</h3>
+                <p data-i18n="port-1-desc">Bemutató oldal nagyvállalati stílusban.</p>
             </div>
             <div class="product-card">
                 <div class="product-image">🏪</div>
-                <h3>Kisbolt webshop</h3>
-                <p>Egyszerű termékfeltöltés és modern vásárlói élmény.</p>
+                <h3 data-i18n="port-2-title">Kisbolt webshop</h3>
+                <p data-i18n="port-2-desc">Egyszerű termékfeltöltés és modern vásárlói élmény.</p>
             </div>
             <div class="product-card">
                 <div class="product-image">🎯</div>
-                <h3>Landing oldal</h3>
-                <p>Konverzió-optimalizált kampányoldalak.</p>
+                <h3 data-i18n="port-3-title">Landing oldal</h3>
+                <p data-i18n="port-3-desc">Konverzió-optimalizált kampányoldalak.</p>
             </div>
         </div>
     </section>
@@ -148,32 +158,32 @@
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-text-content">
-                <h2>Rólunk</h2>
-                <p>Z generációs fiatal csapatként pontosan értjük a mai digitális világ gyors változásait, az aktuális trendeket és azt, hogyan gondolkodnak a modern felhasználók.</p>
-                <p>Az első beszélgetéstől a kész weboldalig végigkísérjük ügyfeleinket, hogy elképzeléseik valódi, működő megoldásokká formálódjanak. Munkánk alapja az átlátható folyamat és az ügyfélközpontú kommunikáció.</p>
-                <p>A tervezés során kiemelt figyelmet fordítunk a letisztult megjelenésre, a logikus felépítésre és a gyors, felhasználóbarát működésre. Fiatalos, lendületes szemléletünk ötvözi a kreativitást a tudatos tervezéssel, így weboldalaink nemcsak esztétikusak, hanem hatékonyak is.</p>
+                <h2 data-i18n="about-title">Rólunk</h2>
+                <p data-i18n="about-p1">Z generációs fiatal csapatként pontosan értjük a mai digitális világ gyors változásait, az aktuális trendeket és azt, hogyan gondolkodnak a modern felhasználók.</p>
+                <p data-i18n="about-p2">Az első beszélgetéstől a kész weboldalig végigkísérjük ügyfeleinket, hogy elképzeléseik valódi, működő megoldásokká formálódjanak. Munkánk alapja az átlátható folyamat és az ügyfélközpontú kommunikáció.</p>
+                <p data-i18n="about-p3">A tervezés során kiemelt figyelmet fordítunk a letisztult megjelenésre, a logikus felépítésre és a gyors, felhasználóbarát működésre. Fiatalos, lendületes szemléletünk ötvözi a kreativitást a tudatos tervezéssel, így weboldalaink nemcsak esztétikusak, hanem hatékonyak is.</p>
             </div>
             
             <div class="about-highlights">
                 <div class="highlight-box">
                     <div class="highlight-icon">⚡</div>
                     <div>
-                        <h3>Z-Generációs lendület</h3>
-                        <p>A legújabb trendek és technológiák naprakész alkalmazása.</p>
+                        <h3 data-i18n="about-b1-title">Z-Generációs lendület</h3>
+                        <p data-i18n="about-b1-desc">A legújabb trendek és technológiák naprakész alkalmazása.</p>
                     </div>
                 </div>
                 <div class="highlight-box">
                     <div class="highlight-icon">🤝</div>
                     <div>
-                        <h3>Transzparens folyamat</h3>
-                        <p>Minden lépés érthető, követhető és kiszámítható az elejétől a végéig.</p>
+                        <h3 data-i18n="about-b2-title">Transzparens folyamat</h3>
+                        <p data-i18n="about-b2-desc">Minden lépés érthető, követhető és kiszámítható az elejétől a végéig.</p>
                     </div>
                 </div>
                 <div class="highlight-box">
                     <div class="highlight-icon">💎</div>
                     <div>
-                        <h3>Egyedi dizájn</h3>
-                        <p>Nincsenek sablonok, minden oldalt a te márkádra szabunk.</p>
+                        <h3 data-i18n="about-b3-title">Egyedi dizájn</h3>
+                        <p data-i18n="about-b3-desc">Nincsenek sablonok, minden oldalt a te márkádra szabunk.</p>
                     </div>
                 </div>
             </div>
@@ -183,22 +193,22 @@
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
-                <h2>Kapcsolat</h2>
-                <p class="contact-description">Küldj e-mailt az igényeiddel, vagy töltsd ki az űrlapot, és 24 órán belül válaszolunk.</p>
+                <h2 data-i18n="contact-title">Kapcsolat</h2>
+                <p class="contact-description" data-i18n="contact-desc">Küldj e-mailt az igényeiddel, vagy töltsd ki az űrlapot, és 24 órán belül válaszolunk.</p>
                 
                 <div class="contact-details">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
-                            <h4>E-mail címünk</h4>
+                            <h4 data-i18n="contact-det1-title">E-mail címünk</h4>
                             <a href="mailto:shadowwsite@gmail.com">shadowwsite@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">💬</div>
                         <div>
-                            <h4>Gyors segítség</h4>
-                            <a href="#" onclick="openChatbot(); return false;">Csevegj az élő chatbotunkkal!</a>
+                            <h4 data-i18n="contact-det2-title">Gyors segítség</h4>
+                            <a href="#" onclick="openChatbot(); return false;" data-i18n="contact-chat-link">Csevegj az élő chatbotunkkal!</a>
                         </div>
                     </div>
                 </div>
@@ -210,18 +220,18 @@
                     <input type="hidden" name="_next" value="https://tomikaa11.github.io/docs/index.html">
                     
                     <div class="form-group">
-                        <label for="form-name">Név</label>
-                        <input type="text" id="form-name" name="name" placeholder="Kovács János" required>
+                        <label for="form-name" data-i18n="form-name-label">Név</label>
+                        <input type="text" id="form-name" name="name" placeholder="Kovács János" data-i18n-placeholder="form-name-ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="form-email">E-mail cím</label>
-                        <input type="email" id="form-email" name="email" placeholder="janos@pelda.hu" required>
+                        <label for="form-email" data-i18n="form-email-label">E-mail cím</label>
+                        <input type="email" id="form-email" name="email" placeholder="janos@pelda.hu" data-i18n-placeholder="form-email-ph" required>
                     </div>
                     <div class="form-group">
-                        <label for="form-message">Üzenet / Igények</label>
-                        <textarea id="form-message" name="message" rows="4" placeholder="Írd le röviden a projektet..." required></textarea>
+                        <label for="form-message" data-i18n="form-message-label">Üzenet / Igények</label>
+                        <textarea id="form-message" name="message" rows="4" placeholder="Írd le röviden a projektet..." data-i18n-placeholder="form-message-ph" required></textarea>
                     </div>
-                    <button type="submit" class="submit-button">Üzenet küldése</button>
+                    <button type="submit" class="submit-button" data-i18n="form-submit">Üzenet küldése</button>
                 </form>
             </div>
         </div>
@@ -230,8 +240,8 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-legal">
-                <a href="aszf.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">ÁSZF</a>
-                <a href="adatvedelmi.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Adatvédelmi szerződés</a>
+                <a href="aszf.pdf" class="footer-link" target="_blank" rel="noopener noreferrer" data-i18n="footer-gtc">ÁSZF</a>
+                <a href="adatvedelmi.pdf" class="footer-link" target="_blank" rel="noopener noreferrer" data-i18n="footer-privacy">Adatvédelmi szerződés</a>
             </div>
             <p>&copy; 2026 copyright SHADOWWSITE. All rights reserved.</p>
             <div class="social-links">
@@ -251,17 +261,17 @@
     <div class="chatbot" aria-live="polite">
         <button class="chatbot-toggle" type="button" aria-expanded="false" aria-controls="chatbot-panel">
             💬
-            <span class="chatbot-toggle-text">Kérdésed van?</span>
+            <span class="chatbot-toggle-text" data-i18n="chat-toggle">Kérdésed van?</span>
         </button>
         <div id="chatbot-panel" class="chatbot-panel" role="dialog" aria-label="SHADOW chatbot" aria-hidden="true">
             <div class="chatbot-header">
-                <span>SHADOW Chat</span>
+                <span data-i18n="chat-title">SHADOW Chat</span>
                 <button class="chatbot-close" type="button" aria-label="Bezárás">×</button>
             </div>
             <div class="chatbot-messages" role="log"></div>
             <form class="chatbot-form" autocomplete="off">
-                <input class="chatbot-input" type="text" name="message" placeholder="Írd be a kérdésed..." required />
-                <button class="chatbot-send" type="submit">Küldés</button>
+                <input class="chatbot-input" type="text" name="message" placeholder="Írd be a kérdésed..." data-i18n-placeholder="chat-input-ph" required />
+                <button class="chatbot-send" type="submit" data-i18n="chat-send">Küldés</button>
             </form>
         </div>
     </div>
