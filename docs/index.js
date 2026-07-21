@@ -123,7 +123,35 @@ const translations = {
         "chat-input-ph": "Írd be a kérdésed...",
         "chat-send": "Küldés",
         "chat-welcome": "Szia! Miben segíthetek?",
-        "chat-default-reply": "Köszönöm a kérdést! Írd le röviden az igényt, és hamarosan válaszolunk."
+        "chat-default-reply": "Köszönöm a kérdést! Írd le röviden az igényt, és hamarosan válaszolunk.",
+        "nav-blog": "Blog",
+        "blog-back": "← Vissza a főoldalra",
+        "blog-title": "SHADOWWSITE Blog",
+        "blog-subtitle": "Tippek, trendek és tudás a webfejlesztés világából",
+        "blog-p1-date": "2026. február 22.",
+        "blog-p1-title": "Miért fontos a mobilbarát weboldal?",
+        "blog-p1-desc1": "A mai felhasználók többsége mobilról böngészi az internetet. A statisztikák azt mutatják, hogy az internetes forgalom 60-70%-a mobil eszközökről érkezik. Ennek megfelelően a weboldal tervezésénél azt kell elsősorban figyelembe venni, hogy a felhasználók mobil telefonról érkeznek.",
+        "blog-p1-desc2": "A mobilbarát weboldal nem csupán esztétikailag fontos, hanem a keresőmotorok (Google) is preferálják az olyan oldalakat, amelyek jól működnek kis képernyőkön. Ezt az úgynevezett \"mobile-first indexing\" szolgáltatás alatt értjük.",
+        "blog-p1-read": "📝 5 perc olvasás",
+        "blog-p1-team": "👤 SHADOWWSITE csapat",
+        "blog-p2-date": "2026. február 15.",
+        "blog-p2-title": "SEO alapok: Hogyan javítsd meg a keresőmotor-rangsorolásod",
+        "blog-p2-desc1": "A Search Engine Optimization (SEO) azon technikák összessége, amelyekkel a weboldalad jobb pozíciót érhet el a Google keresési eredményeiben. Ez nem csak a nagyobb vállalatok feladata – a kisvállalkozások és magánszemélyek számára még inkább kritikus lehet.",
+        "blog-p2-desc2": "Az alapvető SEO elemek közé tartozik a megfelelő kulcsszóhasználat, a meta description optimalizálása, az oldal betöltési sebességének javítása, valamint a backlinkek szerzése. Ezen faktorok kombinálásával lépésenként emelkedhet az oldal láthatósága a keresőmotorban.",
+        "blog-p2-read": "📝 8 perc olvasás",
+        "blog-p2-team": "👤 SHADOWWSITE csapat",
+        "blog-p3-date": "2026. február 8.",
+        "blog-p3-title": "A weboldalad betöltési sebessége kritikus",
+        "blog-p3-desc1": "Az internethasználók türelmetlenek. Ha egy oldal több mint 3 másodpercig betöltődik, a látogatók nagy valószínűséggel elhagyják az oldalt. Ez közvetlenül befolyásolja a konverziót és a keresőmotorban való rangsorolást is.",
+        "blog-p3-desc2": "A weboldal sebessége számos faktortól függ: a képek optimalizálása, a kód minimalizálása, a cache kezelés, valamint a hosting minősége. Ezért fontos, hogy a webfejlesztő ezeket az elemeket már a tervezés szakaszában figyelembe vegye.",
+        "blog-p3-read": "📝 6 perc olvasás",
+        "blog-p3-team": "👤 SHADOWWSITE csapat",
+        "blog-p4-date": "2026. január 30.",
+        "blog-p4-title": "Weboldal biztonsága: Mit kell tudnod az SSL tanúsítványról?",
+        "blog-p4-desc1": "Az SSL tanúsítvány már nem luxus, hanem szükséglet. Biztosítja az adatszállítás titkosítottságát a felhasználó böngészője és a szerver között. A Google 2018 óta az összes HTTP oldalt \"nem biztonságos\"-nak jelöli.",
+        "blog-p4-desc2": "A SHADOWWSITE oldalain segítünk kiválasztani és beállítani az Ön weboldalához szükséges SSL tanúsítványt, hogy ügyfeleink információja mindig védett maradjon.",
+        "blog-p4-read": "📝 7 perc olvasás",
+        "blog-p4-team": "👤 SHADOWWSITE csapat"
     },
     en: {
         "nav-home": "Home",
@@ -198,7 +226,35 @@ const translations = {
         "chat-input-ph": "Type your question here...",
         "chat-send": "Send",
         "chat-welcome": "Hello! How can I help you today?",
-        "chat-default-reply": "Thank you for your question! Briefly describe what you need, and we will reply soon."
+        "chat-default-reply": "Thank you for your question! Briefly describe what you need, and we will reply soon.",
+        "nav-blog": "Blog",
+        "blog-back": "← Back to main page",
+        "blog-title": "SHADOWWSITE Blog",
+        "blog-subtitle": "Tips, trends, and knowledge from the world of web development",
+        "blog-p1-date": "February 22, 2026",
+        "blog-p1-title": "Why is a Mobile-Friendly Website Important?",
+        "blog-p1-desc1": "The majority of today's users browse the internet on mobile devices. Statistics show that 60-70% of web traffic comes from mobile devices. Accordingly, when designing a website, the primary consideration should be mobile responsiveness.",
+        "blog-p1-desc2": "A mobile-friendly website is not only visually important, but search engines like Google also favor websites that perform well on small screens under mobile-first indexing.",
+        "blog-p1-read": "📝 5 min read",
+        "blog-p1-team": "👤 SHADOWWSITE team",
+        "blog-p2-date": "February 15, 2026",
+        "blog-p2-title": "SEO Basics: How to Improve Your Search Engine Ranking",
+        "blog-p2-desc1": "Search Engine Optimization (SEO) is the set of techniques used to help your website achieve a better ranking in Google search results. This is critical for small businesses and individuals alike.",
+        "blog-p2-desc2": "Core SEO elements include strategic keyword usage, optimizing meta descriptions, improving page load speeds, and building backlinks to steadily increase online visibility.",
+        "blog-p2-read": "📝 8 min read",
+        "blog-p2-team": "👤 SHADOWWSITE team",
+        "blog-p3-date": "February 8, 2026",
+        "blog-p3-title": "Your Website's Loading Speed is Critical",
+        "blog-p3-desc1": "Internet users are impatient. If a page takes more than 3 seconds to load, visitors are highly likely to bounce. This directly impacts conversion rates and search rankings.",
+        "blog-p3-desc2": "Speed depends on image optimization, code minification, proper caching, and quality hosting. It's essential to address speed right from the planning phase.",
+        "blog-p3-read": "📝 6 min read",
+        "blog-p3-team": "👤 SHADOWWSITE team",
+        "blog-p4-date": "January 30, 2026",
+        "blog-p4-title": "Website Security: What You Need to Know About SSL Certificates",
+        "blog-p4-desc1": "An SSL certificate is no longer optional—it is a necessity. It encrypts data sent between browser and server. Google flags all non-SSL HTTP sites as 'not secure'.",
+        "blog-p4-desc2": "At SHADOWWSITE, we help you select and configure the right SSL certificate for your site so your visitors' data stays protected.",
+        "blog-p4-read": "📝 7 min read",
+        "blog-p4-team": "👤 SHADOWWSITE team"
     }
 };
 
@@ -360,6 +416,9 @@ const closeChatbot = () => {
     chatbotPanel.setAttribute('aria-hidden', 'true');
     chatbotToggle.setAttribute('aria-expanded', 'false');
 };
+
+window.openChatbot = openChatbot;
+window.closeChatbot = closeChatbot;
 
 if (chatbotToggle && chatbotPanel) {
     chatbotToggle.addEventListener('click', () => {
