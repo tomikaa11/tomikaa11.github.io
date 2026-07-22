@@ -452,6 +452,10 @@ if (chatbotForm && chatbotInput) {
 }
 
 // Initial language setup
-document.addEventListener('DOMContentLoaded', () => {
-    window.setLanguage(currentLang);
-});
+const initLanguage = () => window.setLanguage(currentLang);
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguage);
+} else {
+    initLanguage();
+}
