@@ -1205,3 +1205,118 @@ section {
 		height: 400px;
 	}
 }
+
+/* Theme toggle */
+.theme-toggle-btn {
+	background: rgba(255, 255, 255, 0.05) !important;
+	color: var(--white) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	width: 40px;
+	height: 40px;
+	border-radius: 50% !important;
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease !important;
+}
+
+.theme-toggle-btn:hover {
+	background: rgba(255, 255, 255, 0.12) !important;
+	border-color: rgba(255, 255, 255, 0.25) !important;
+	transform: translateY(-1px);
+}
+
+.theme-toggle-btn .icon-sun {
+	display: none;
+}
+
+[data-theme="light"] .theme-toggle-btn .icon-sun {
+	display: block;
+}
+
+[data-theme="light"] .theme-toggle-btn .icon-moon {
+	display: none;
+}
+
+/* Light theme */
+[data-theme="light"] {
+	color-scheme: light;
+	--bg: #f6f7fb;
+	--bg-rgb: 246, 247, 251;
+	--panel: rgba(255, 255, 255, 0.8);
+	--panel-opaque: #ffffff;
+	--text-color: #1e293b;
+	--muted: #64748b;
+	--white: #0f172a;
+	--border: rgba(15, 23, 42, 0.1);
+	--border-hover: rgba(15, 23, 42, 0.18);
+	--shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15);
+	--glow-shadow: 0 0 25px rgba(139, 92, 246, 0.12);
+}
+
+[data-theme="light"] body {
+	background-image:
+		radial-gradient(circle at 10% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 40%),
+		radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+	background: rgba(15, 23, 42, 0.2);
+}
+
+[data-theme="light"] .logo-text,
+[data-theme="light"] .hero-content h1,
+[data-theme="light"] .pricing .price,
+[data-theme="light"] .blog-header h1 {
+	background: linear-gradient(135deg, #0f172a 40%, var(--primary-color));
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .lang-toggle-btn,
+[data-theme="light"] .theme-toggle-btn {
+	background: rgba(15, 23, 42, 0.05) !important;
+	border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+[data-theme="light"] .lang-toggle-btn:hover,
+[data-theme="light"] .theme-toggle-btn:hover {
+	background: rgba(15, 23, 42, 0.1) !important;
+	border-color: rgba(15, 23, 42, 0.25) !important;
+}
+
+[data-theme="light"] .cta-secondary,
+[data-theme="light"] .product-image,
+[data-theme="light"] .form-group textarea,
+[data-theme="light"] .form-group input,
+[data-theme="light"] .chatbot-header,
+[data-theme="light"] .chatbot-message.bot,
+[data-theme="light"] .chatbot-input,
+[data-theme="light"] .social-link,
+[data-theme="light"] .contact-form-container {
+	background: rgba(15, 23, 42, 0.04);
+}
+
+[data-theme="light"] .cta-secondary:hover {
+	background: rgba(15, 23, 42, 0.08);
+	box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+[data-theme="light"] .product-card:hover {
+	box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.2), 0 0 30px rgba(139, 92, 246, 0.12);
+}
+
+[data-theme="light"] .chatbot-panel {
+	box-shadow: 0 15px 40px rgba(15, 23, 42, 0.2);
+}
+
+[data-theme="light"] .cta-button,
+[data-theme="light"] .submit-button,
+[data-theme="light"] .chatbot-toggle,
+[data-theme="light"] .chatbot-send,
+[data-theme="light"] .chatbot-message.user,
+[data-theme="light"] .product-card.popular::before {
+	color: #ffffff;
+}

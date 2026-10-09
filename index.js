@@ -385,6 +385,16 @@ window.setLanguage = function(lang) {
     }
 };
 
+window.toggleTheme = function() {
+    const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    if (next === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('siteTheme', next);
+};
+
 window.toggleLanguage = function() {
     const nextLang = currentLang === 'hu' ? 'en' : 'hu';
     window.setLanguage(nextLang);
