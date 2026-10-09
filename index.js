@@ -263,6 +263,30 @@ const translations = {
 const localizedChatbotReplies = {
     hu: [
         {
+            keywords: ['programozási nyelv', 'programozási nyelvek', 'milyen nyelven', 'milyen technológiával', 'technológia', 'html', 'css', 'javascript'],
+            reply: 'Az oldalak alapját HTML, CSS és JavaScript adja. A pontos technológiát az igényekhez igazítjuk; összetettebb funkcióknál egyeztetjük a megfelelő megoldást.'
+        },
+        {
+            keywords: ['mobilbarát', 'mobilon', 'telefonon', 'reszponzív', 'responsive'],
+            reply: 'Igen, az oldalakat mobilra és más képernyőméretekre is optimalizáljuk, hogy minden eszközön jól használhatók legyenek.'
+        },
+        {
+            keywords: ['seo', 'keresőoptimalizálás', 'google találat', 'keresőben'],
+            reply: 'Az alap SEO-beállítások a csomag részét képezik. A részletes keresőoptimalizálási igényeket az ajánlatkéréskor tudjuk egyeztetni.'
+        },
+        {
+            keywords: ['szöveget', 'szövegeket', 'képeket', 'fotókat', 'tartalmat', 'tartalom'],
+            reply: 'A szövegek és képek rendelkezésre állását érdemes a projekt elején egyeztetni. Írd meg, miben van szükséged segítségre, és megbeszéljük a lehetőségeket.'
+        },
+        {
+            keywords: ['domain', 'tárhely', 'hoszting', 'hosting'],
+            reply: 'A domainnel és tárhellyel kapcsolatos igényeket a projekt elején egyeztetjük, és segítünk megtalálni a megfelelő megoldást.'
+        },
+        {
+            keywords: ['egyedi dizájn', 'egyedi design', 'sablon', 'arculat', 'megjelenés'],
+            reply: 'Egyedi megjelenésű oldalakat készítünk, az arculatot és a funkciókat a vállalkozásodhoz és az igényeidhez igazítva.'
+        },
+        {
             keywords: ['ár', 'árajánlat', 'költség', 'díj', 'csomag', 'árak'],
             reply: 'Az árajánlatot a projekt részletei alapján készítjük. Írd meg az igényeidet, és 24 órán belül visszajelzünk.'
         },
@@ -284,6 +308,30 @@ const localizedChatbotReplies = {
         }
     ],
     en: [
+        {
+            keywords: ['programming language', 'what language', 'technology', 'technologies', 'html', 'css', 'javascript'],
+            reply: 'Websites are built on HTML, CSS, and JavaScript. We choose the exact technologies based on your needs and discuss suitable options for more complex features.'
+        },
+        {
+            keywords: ['mobile-friendly', 'mobile friendly', 'on mobile', 'responsive'],
+            reply: 'Yes, we optimize websites for mobile and other screen sizes so they work well across devices.'
+        },
+        {
+            keywords: ['seo', 'search engine optimization', 'google ranking', 'search results'],
+            reply: 'Basic SEO setup is included in our packages. We can discuss more detailed search optimization requirements when you request a quote.'
+        },
+        {
+            keywords: ['text', 'texts', 'images', 'photos', 'content'],
+            reply: 'It is best to discuss the availability of text and images at the start of the project. Tell us what you need help with, and we can talk through the options.'
+        },
+        {
+            keywords: ['domain', 'hosting'],
+            reply: 'We discuss domain and hosting requirements at the start of the project and can help you find a suitable solution.'
+        },
+        {
+            keywords: ['custom design', 'template', 'branding', 'visual design'],
+            reply: 'We create custom-designed websites, tailoring the look and functionality to your business and requirements.'
+        },
         {
             keywords: ['price', 'quote', 'cost', 'fee', 'package', 'prices', 'pricing'],
             reply: 'We prepare the quote based on the project details. Write us your requirements, and we will get back to you within 24 hours.'
