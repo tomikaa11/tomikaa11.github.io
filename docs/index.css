@@ -580,13 +580,24 @@ section {
 }
 
 .about-text-content h2 {
-	font-family: var(--font-body);
-	font-size: 13px;
-	font-weight: 600;
+	font-family: var(--font-title);
+	font-size: 38px;
+	font-weight: 800;
 	color: var(--white);
-	margin-bottom: 20px;
-	letter-spacing: 0.18em;
-	text-transform: uppercase;
+	margin-bottom: 24px;
+	position: relative;
+	display: inline-block;
+}
+
+.about-text-content h2::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -6px;
+	width: 60px;
+	height: 3px;
+	background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+	border-radius: 2px;
 }
 
 .about-text-content p {
@@ -641,18 +652,16 @@ section {
 
 .highlight-box h3 {
 	color: var(--white);
-	font-family: var(--font-body);
-	font-size: 12px;
-	font-weight: 600;
+	font-family: var(--font-title);
+	font-size: 18px;
+	font-weight: 700;
 	margin-bottom: 6px;
-	letter-spacing: 0.12em;
-	text-transform: uppercase;
 }
 
 .highlight-box p {
 	color: var(--muted);
-	font-size: 13px;
-	line-height: 1.65;
+	font-size: 14px;
+	line-height: 1.5;
 }
 
 /* Contact Section */
@@ -1065,6 +1074,11 @@ section {
 
 	.about-text-content {
 		text-align: center;
+	}
+
+	.about-text-content h2::after {
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.highlight-box {
