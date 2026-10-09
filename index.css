@@ -408,6 +408,21 @@ section {
 	color: var(--white);
 }
 
+.portfolio-preview h2 {
+	margin-bottom: 8px;
+}
+
+.portfolio-hint {
+	margin: 0;
+	color: var(--muted);
+	font-size: 13px;
+	text-align: center;
+}
+
+.portfolio-preview .products-grid {
+	margin-top: 28px;
+}
+
 /* Grid & Cards (Shared by Services, Pricing, Portfolio) */
 .products-grid {
 	display: grid;
