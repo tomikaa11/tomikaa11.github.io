@@ -1320,3 +1320,7 @@ section {
 [data-theme="light"] .product-card.popular::before {
 	color: #ffffff;
 }
+
+[data-theme="light"] .navbar {
+	box-shadow: 0 6px 20px rgba(15, 23, 42, 0.1) !important;
+}
