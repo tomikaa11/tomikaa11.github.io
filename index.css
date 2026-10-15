@@ -1108,25 +1108,32 @@ section {
 
 	.nav-menu {
 		position: fixed;
-		left: -100%;
 		top: 70px;
+		right: 0;
+		left: auto;
 		flex-direction: column;
 		background: var(--panel-opaque);
-		width: 100%;
+		width: min(100%, 320px);
 		text-align: center;
-		transition: 0.3s ease;
-		gap: 0;
-		padding: 30px 0;
+		transform: translateX(105%);
+		transition: transform 0.3s ease;
+		gap: 2px;
+		padding: 12px 16px 16px;
 		box-shadow: var(--shadow);
 		border-bottom: 1px solid var(--border);
+		border-left: 1px solid var(--border);
+		max-height: calc(100vh - 78px);
+		max-height: calc(100dvh - 78px);
+		overflow-y: auto;
+		z-index: 250;
 	}
 
 	.nav-menu.active {
-		left: 0;
+		transform: translateX(0);
 	}
 
 	.nav-item {
-		padding: 16px 0;
+		padding: 4px 0;
 		width: 100%;
 	}
 
