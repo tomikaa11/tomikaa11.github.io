@@ -607,6 +607,19 @@ section {
 	margin-bottom: 20px;
 }
 
+.about-text-content .about-lead {
+	font-family: var(--font-title);
+	font-size: 20px;
+	font-weight: 600;
+	color: var(--white);
+	margin-bottom: 22px;
+}
+
+.about-text-content .about-tagline {
+	color: var(--text-color);
+	font-weight: 600;
+}
+
 .about-text-content p:last-child {
 	margin-bottom: 0;
 }
