@@ -42,12 +42,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-const chatbotToggle = document.querySelector('.chatbot-toggle');
-const chatbotPanel = document.querySelector('.chatbot-panel');
-const chatbotClose = document.querySelector('.chatbot-close');
-const chatbotForm = document.querySelector('.chatbot-form');
-const chatbotInput = document.querySelector('.chatbot-input');
-const chatbotMessages = document.querySelector('.chatbot-messages');
 
 const translations = {
     hu: {
@@ -71,12 +65,12 @@ const translations = {
         "service-3-desc": "Frissítések, biztonsági mentések és folyamatos támogatás.",
         "pricing-title": "Áraink",
         "pricing-subtitle": "Átlátható csomagok, rugalmas bővítési lehetőségekkel.",
-        "price-1-title": "Start",
+        "price-1-title": "Starter",
         "price-1-val": "100 000 Ft-tól",
         "price-1-f1": "1-3 oldalas bemutatkozó oldal",
         "price-1-f2": "Mobilbarát, gyors betöltés",
         "price-1-f3": "Alap SEO beállítások",
-        "price-2-title": "Business",
+        "price-2-title": "Standard",
         "price-2-val": "149 000 Ft-tól",
         "price-2-f1": "5-8 aloldal, egyedi dizájn",
         "price-2-f2": "Kapcsolati űrlap és térkép",
@@ -112,10 +106,8 @@ const translations = {
         "about-b3-desc": "Megoldásokat építek, a fejlesztést a célokhoz igazítom.",
         "contact-title": "Kapcsolat",
         "contact-desc": "Küldj e-mailt az igényeiddel, vagy töltsd ki az űrlapot, és 24 órán belül válaszolunk.",
-        "contact-det1-title": "E-mail címünk",
-        "contact-phone-title": "Telefonszámunk",
-        "contact-det2-title": "Gyors segítség",
-        "contact-chat-link": "Csevegj az élő chatbotunkkal!",
+        "contact-det1-title": "E-mail cím",
+        "contact-phone-title": "Telefonszám",
         "form-name-label": "Név",
         "form-name-ph": "Kovács János",
         "form-email-label": "E-mail cím",
@@ -125,12 +117,6 @@ const translations = {
         "form-submit": "Üzenet küldése",
         "footer-gtc": "ÁSZF",
         "footer-privacy": "Adatvédelmi szerződés",
-        "chat-toggle": "Kérdésed van?",
-        "chat-title": "TT Chat",
-        "chat-input-ph": "Írd be a kérdésed...",
-        "chat-send": "Küldés",
-        "chat-welcome": "Szia! Miben segíthetek?",
-        "chat-default-reply": "Köszönöm a kérdést! Írd le röviden az igényt, és hamarosan válaszolunk.",
         "nav-blog": "Blog",
         "blog-back": "← Vissza a főoldalra",
         "blog-title": "TT Blog",
@@ -181,12 +167,12 @@ const translations = {
         "service-3-desc": "Updates, security backups, and continuous support.",
         "pricing-title": "Pricing",
         "pricing-subtitle": "Transparent packages with flexible customization options.",
-        "price-1-title": "Start",
+        "price-1-title": "Starter",
         "price-1-val": "From 100,000 HUF",
         "price-1-f1": "1-3 page presentation website",
         "price-1-f2": "Mobile-friendly, fast loading speed",
         "price-1-f3": "Basic SEO configuration",
-        "price-2-title": "Business",
+        "price-2-title": "Standard",
         "price-2-val": "From 149,000 HUF",
         "price-2-f1": "5-8 subpages, custom layout design",
         "price-2-f2": "Contact form and map integration",
@@ -224,8 +210,6 @@ const translations = {
         "contact-desc": "Send us an email outlining your project requirements or fill out the form, and we will reply within 24 hours.",
         "contact-det1-title": "Our Email",
         "contact-phone-title": "Phone number",
-        "contact-det2-title": "Quick Help",
-        "contact-chat-link": "Chat with our live support bot!",
         "form-name-label": "Name",
         "form-name-ph": "John Doe",
         "form-email-label": "Email Address",
@@ -235,12 +219,6 @@ const translations = {
         "form-submit": "Send Message",
         "footer-gtc": "Terms & Conditions",
         "footer-privacy": "Privacy Policy",
-        "chat-toggle": "Have a question?",
-        "chat-title": "TT Chat",
-        "chat-input-ph": "Type your question here...",
-        "chat-send": "Send",
-        "chat-welcome": "Hello! How can I help you today?",
-        "chat-default-reply": "Thank you for your question! Briefly describe what you need, and we will reply soon.",
         "nav-blog": "Blog",
         "blog-back": "← Back to main page",
         "blog-title": "TT Blog",
@@ -270,53 +248,6 @@ const translations = {
         "blog-p4-read": "📝 7 min read",
         "blog-p4-team": "👤 TT team"
     }
-};
-
-const localizedChatbotReplies = {
-    hu: [
-        {
-            keywords: ['ár', 'árajánlat', 'költség', 'díj', 'csomag', 'árak'],
-            reply: 'Az árajánlatot a projekt részletei alapján készítjük. Írd meg az igényeidet, és 24 órán belül visszajelzünk.'
-        },
-        {
-            keywords: ['webshop', 'bolt', 'e-kereskedelem'],
-            reply: 'Webshopot is készítünk: termékkezelés, fizetés, szállítási beállítások és admin felület is megoldható.'
-        },
-        {
-            keywords: ['idő', 'határidő', 'mennyi', 'mikor', 'kész', 'készen lesz', 'mennyi idő', 'mennyi idő alatt'],
-            reply: 'A legtöbb projekt 1–4 hét alatt készül el a terjedelemtől és az anyagok rendelkezésre állásától függően.'
-        },
-        {
-            keywords: ['karbantartás', 'frissítés', 'támogatás', 'utólagos', 'utólag', 'később', 'későbbi'],
-            reply: 'Vállalunk karbantartást, frissítést és folyamatos támogatást is.'
-        },
-        {
-            keywords: ['kapcsolat', 'email', 'telefon', 'elérhetőség', 'hogyan', 'hogy', 'hol', 'elérhetőségek'],
-            reply: 'Írj a shadowwsite@gmail.com címre, vagy hagyd itt a kérdésed, és visszajelzünk.'
-        }
-    ],
-    en: [
-        {
-            keywords: ['price', 'quote', 'cost', 'fee', 'package', 'prices', 'pricing'],
-            reply: 'We prepare the quote based on the project details. Write us your requirements, and we will get back to you within 24 hours.'
-        },
-        {
-            keywords: ['webshop', 'store', 'shop', 'e-commerce'],
-            reply: 'We also build webshops: product management, payment, shipping setup, and an admin dashboard can be implemented.'
-        },
-        {
-            keywords: ['time', 'deadline', 'how long', 'when', 'ready', 'completed', 'duration'],
-            reply: 'Most projects are completed in 1 to 4 weeks, depending on scope and the availability of assets.'
-        },
-        {
-            keywords: ['maintenance', 'update', 'support', 'aftercare', 'later', 'future'],
-            reply: 'We offer maintenance, updates, and continuous support after launch.'
-        },
-        {
-            keywords: ['contact', 'email', 'phone', 'reach', 'how to', 'address', 'details'],
-            reply: 'Write to shadowwsite@gmail.com, or leave your question here, and we will get back to you.'
-        }
-    ]
 };
 
 let currentLang = localStorage.getItem('siteLang') || 'hu';
@@ -353,117 +284,6 @@ window.toggleLanguage = function() {
     const nextLang = currentLang === 'hu' ? 'en' : 'hu';
     window.setLanguage(nextLang);
 };
-
-const saveChatHistory = () => {
-    const messages = Array.from(chatbotMessages.children).map(msg => ({
-        text: msg.textContent,
-        type: msg.classList.contains('user') ? 'user' : 'bot'
-    }));
-    localStorage.setItem('shadowChatHistory', JSON.stringify(messages));
-};
-
-const loadChatHistory = () => {
-    const history = localStorage.getItem('shadowChatHistory');
-    if (history) {
-        const messages = JSON.parse(history);
-        messages.forEach(msg => {
-            addMessageWithoutSave(msg.text, msg.type);
-        });
-    }
-};
-
-const addMessageWithoutSave = (text, type) => {
-    if (!chatbotMessages) return;
-    const message = document.createElement('div');
-    message.classList.add('chatbot-message', type);
-    message.textContent = text;
-    chatbotMessages.appendChild(message);
-    chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-};
-
-const addMessage = (text, type) => {
-    addMessageWithoutSave(text, type);
-    saveChatHistory();
-};
-
-const getChatbotReply = (input) => {
-    const text = input.toLowerCase();
-    const replies = localizedChatbotReplies[currentLang] || localizedChatbotReplies['hu'];
-    const match = replies.find(item => item.keywords.some(keyword => text.includes(keyword)));
-    if (match) return match.reply;
-    return translations[currentLang]['chat-default-reply'];
-};
-
-const sendQuestionToEmail = (question) => {
-    const now = new Date().toLocaleString(currentLang === 'hu' ? 'hu-HU' : 'en-US');
-    fetch('https://formsubmit.co/ajax/shadowwsite@gmail.com', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-            _subject: currentLang === 'hu' ? '🤖 Új chatbot kérdés' : '🤖 New chatbot question',
-            Időpont: now,
-            Kérdés: question,
-            Oldal: window.location.href
-        })
-    }).catch(err => console.log('Email küldés:', err));
-};
-
-const openChatbot = () => {
-    if (!chatbotPanel || !chatbotToggle) return;
-    chatbotPanel.classList.add('is-open');
-    chatbotPanel.setAttribute('aria-hidden', 'false');
-    chatbotToggle.setAttribute('aria-expanded', 'true');
-    if (chatbotMessages && chatbotMessages.children.length === 0) {
-        addMessage(translations[currentLang]['chat-welcome'], 'bot');
-    }
-    if (chatbotInput) {
-        chatbotInput.focus();
-    }
-};
-
-const closeChatbot = () => {
-    if (!chatbotPanel || !chatbotToggle) return;
-    chatbotPanel.classList.remove('is-open');
-    chatbotPanel.setAttribute('aria-hidden', 'true');
-    chatbotToggle.setAttribute('aria-expanded', 'false');
-};
-
-window.openChatbot = openChatbot;
-window.closeChatbot = closeChatbot;
-
-if (chatbotToggle && chatbotPanel) {
-    chatbotToggle.addEventListener('click', () => {
-        const isOpen = chatbotPanel.classList.contains('is-open');
-        if (isOpen) {
-            closeChatbot();
-        } else {
-            openChatbot();
-        }
-    });
-}
-
-if (chatbotClose) {
-    chatbotClose.addEventListener('click', closeChatbot);
-}
-
-if (chatbotForm && chatbotInput) {
-    chatbotForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        const userText = chatbotInput.value.trim();
-        if (!userText) return;
-        
-        // Kérdés elküldése emailben
-        sendQuestionToEmail(userText);
-        
-        addMessage(userText, 'user');
-        chatbotInput.value = '';
-        const reply = getChatbotReply(userText);
-        setTimeout(() => addMessage(reply, 'bot'), 400);
-    });
-}
 
 // Initial language setup
 const initLanguage = () => window.setLanguage(currentLang);
