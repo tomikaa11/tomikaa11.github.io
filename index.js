@@ -1,6 +1,6 @@
 
 const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+const navMenu = document.querySelector('.nav-panel');
 
 if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {

@@ -99,14 +99,26 @@ section {
 }
 
 .navbar-container {
-	max-width: 1200px;
+	max-width: 1320px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 24px;
-	display: flex;
-	justify-content: space-between;
+	padding: 0 28px;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
 	align-items: center;
-	height: 76px;
+	height: 80px;
+	column-gap: 20px;
+}
+
+.nav-panel {
+	display: contents;
+}
+
+.navbar-logo {
+	grid-column: 2;
+	grid-row: 1;
+	z-index: 2;
+	padding: 0 10px;
 }
 
 .navbar-logo a {
@@ -117,7 +129,7 @@ section {
 }
 
 .brand-logo {
-	height: 42px;
+	height: 46px;
 	width: auto;
 	display: block;
 }
@@ -137,11 +149,23 @@ section {
 	letter-spacing: -0.5px;
 }
 
-.nav-menu {
+.nav-group {
 	display: flex;
 	list-style: none;
-	gap: 28px;
+	gap: 18px;
 	align-items: center;
+	grid-row: 1;
+	min-width: 0;
+}
+
+.nav-group-left {
+	grid-column: 1;
+	justify-content: flex-end;
+}
+
+.nav-group-right {
+	grid-column: 3;
+	justify-content: flex-start;
 }
 
 .nav-item {
@@ -152,7 +176,7 @@ section {
 	color: var(--muted);
 	text-decoration: none;
 	font-weight: 500;
-	font-size: 15px;
+	font-size: 14px;
 	transition: color 0.25s ease;
 	padding: 8px 0;
 	display: inline-block;
@@ -1105,18 +1129,37 @@ section {
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
 	.navbar-container {
+		display: flex;
+		justify-content: center;
 		height: 70px;
 		padding: 0 20px;
 	}
 
-	.nav-menu {
+	.navbar-logo {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding: 0;
+	}
+
+	.hamburger {
+		position: absolute;
+		right: 20px;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 3;
+	}
+
+	.nav-panel {
+		display: flex;
+		flex-direction: column;
 		position: fixed;
 		top: 70px;
 		right: 0;
 		left: auto;
-		flex-direction: column;
 		background: var(--panel-opaque);
 		width: min(100%, 320px);
 		text-align: center;
@@ -1133,8 +1176,14 @@ section {
 		z-index: 250;
 	}
 
-	.nav-menu.active {
+	.nav-panel.active {
 		transform: translateX(0);
+	}
+
+	.nav-group {
+		flex-direction: column;
+		width: 100%;
+		gap: 2px;
 	}
 
 	.nav-item {

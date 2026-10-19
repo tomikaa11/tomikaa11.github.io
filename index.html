@@ -20,12 +20,8 @@
     
     <nav class="navbar">
         <div class="navbar-container">
-            <div class="navbar-logo">
-                <a href="#home" class="logo-link" aria-label="TT home" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => location.reload(), 200); return false;">
-                    <img src="/logo.png" alt="TT" class="brand-logo">
-                </a>
-            </div>
-            <ul class="nav-menu">
+            <div class="nav-panel">
+            <ul class="nav-group nav-group-left">
                 <li class="nav-item">
                     <a href="#home" class="nav-link" data-i18n="nav-home">Kezdőlap</a>
                 </li>
@@ -38,6 +34,8 @@
                 <li class="nav-item">
                     <a href="#portfolio" class="nav-link" data-i18n="nav-portfolio">Portfólió</a>
                 </li>
+            </ul>
+            <ul class="nav-group nav-group-right">
                 <li class="nav-item">
                     <a href="#contact" class="nav-link" data-i18n="nav-contact">Kapcsolat</a>
                 </li>
@@ -69,6 +67,12 @@
                     </button>
                 </li>
             </ul>
+            </div>
+            <div class="navbar-logo">
+                <a href="#home" class="logo-link" aria-label="TT home" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); setTimeout(() => location.reload(), 200); return false;">
+                    <img src="/logo.png" alt="TT" class="brand-logo">
+                </a>
+            </div>
             <div class="hamburger" aria-label="Menü megnyitása" role="button" tabindex="0">
                 <span></span>
                 <span></span>
@@ -80,7 +84,6 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <img src="/logo.png" alt="TT" class="hero-logo">
-            <h1 data-i18n="hero-title">Modern weboldalak, amelyek kiemelnek az online térben</h1>
             <p data-i18n="hero-desc">Modern, gyors és mobilbarát weboldalak — magánszemélyeknek, kisvállalkozásoknak, cégeknek.</p>
             <p class="hero-subtitle" data-i18n="hero-subtitle">Egyedi dizájn, átlátható fejlesztés, megbízható karbantartás</p>
             <div class="hero-buttons">
