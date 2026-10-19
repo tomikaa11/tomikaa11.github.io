@@ -1,4 +1,12 @@
 
+if (sessionStorage.getItem('tt-logo-refresh') === '1') {
+    sessionStorage.removeItem('tt-logo-refresh');
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+}
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-panel');
 
@@ -16,7 +24,7 @@ if (hamburger && navMenu) {
     });
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]:not(.logo-link)').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
         if (!href || href === '#') return;
@@ -28,6 +36,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+    });
+});
+
+document.querySelectorAll('.logo-link').forEach((logo) => {
+    logo.addEventListener('click', (event) => {
+        const href = logo.getAttribute('href') || '';
+        if (!href.startsWith('#')) return;
+
+        event.preventDefault();
+
+        const refreshAtTop = () => {
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+            const cleanUrl = location.pathname + location.search;
+            if (location.hash) {
+                history.replaceState(null, '', cleanUrl);
+            }
+            window.scrollTo(0, 0);
+            sessionStorage.setItem('tt-logo-refresh', '1');
+            location.reload();
+        };
+
+        if (window.scrollY <= 1) {
+            refreshAtTop();
+            return;
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        const started = performance.now();
+        const waitForTop = () => {
+            if (window.scrollY <= 1 || performance.now() - started > 1500) {
+                refreshAtTop();
+                return;
+            }
+            requestAnimationFrame(waitForTop);
+        };
+        requestAnimationFrame(waitForTop);
     });
 });
 
