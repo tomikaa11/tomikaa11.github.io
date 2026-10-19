@@ -4,7 +4,7 @@ if (sessionStorage.getItem('tt-logo-refresh') === '1') {
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'manual';
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'auto' });
 }
 
 const hamburger = document.querySelector('.hamburger');
@@ -54,7 +54,7 @@ document.querySelectorAll('.logo-link').forEach((logo) => {
             if (location.hash) {
                 history.replaceState(null, '', cleanUrl);
             }
-            window.scrollTo(0, 0);
+            window.scrollTo({ top: 0, behavior: 'auto' });
             sessionStorage.setItem('tt-logo-refresh', '1');
             location.reload();
         };
