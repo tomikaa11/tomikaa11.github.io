@@ -54,7 +54,7 @@ const translations = {
         "hero-title": "Modern weboldalak, amelyek kiemelnek az online térben",
         "hero-desc": "Modern, gyors és mobilbarát weboldalak — magánszemélyeknek, kisvállalkozásoknak, cégeknek.",
         "hero-subtitle": "Egyedi dizájn, átlátható fejlesztés, megbízható karbantartás",
-        "hero-cta-primary": "Kérj árajánlatot",
+        "hero-cta-primary": "Árajánlat igénylése",
         "services-title": "Szolgáltatások",
         "service-1-title": "Weboldal készítés",
         "service-1-desc": "Reszponzív, Modern és gyors weboldalak egyedi igényekre.",
