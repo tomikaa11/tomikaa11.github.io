@@ -7,23 +7,23 @@
 }
 
 :root {
-	--bg: #070605;
-	--bg-rgb: 7, 6, 5;
-	--panel: rgba(16, 14, 12, 0.72);
-	--panel-opaque: #100e0c;
-	--primary-color: #d2b496; /* Logo champagne */
-	--primary-rgb: 210, 180, 150;
-	--secondary-color: #b08a62; /* Logo bronze */
-	--secondary-rgb: 176, 138, 98;
-	--on-primary: #14110e;
-	--accent-color: #10b981; /* Emerald */
-	--text-color: #f1f5f9; /* Slate 100 */
-	--muted: #94a3b8; /* Slate 400 */
-	--white: #ffffff;
-	--border: rgba(255, 255, 255, 0.06);
-	--border-hover: rgba(255, 255, 255, 0.12);
-	--shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-	--glow-shadow: 0 0 25px rgba(var(--primary-rgb), 0.18);
+	--bg: #DCCCB6;
+	--bg-rgb: 220, 204, 182;
+	--panel: rgba(255, 255, 255, 0.94);
+	--panel-opaque: #ffffff;
+	--primary-color: #737373;
+	--primary-rgb: 115, 115, 115;
+	--secondary-color: #5c5c5c;
+	--secondary-rgb: 92, 92, 92;
+	--on-primary: #ffffff;
+	--accent-color: #737373;
+	--text-color: #4f4f4f;
+	--muted: #737373;
+	--white: #737373;
+	--border: rgba(115, 115, 115, 0.18);
+	--border-hover: rgba(115, 115, 115, 0.36);
+	--shadow: 0 10px 30px -12px rgba(115, 115, 115, 0.35);
+	--glow-shadow: 0 0 25px rgba(115, 115, 115, 0.12);
 	--font-title: 'Outfit', sans-serif;
 	--font-body: 'Inter', sans-serif;
 }
@@ -116,15 +116,25 @@ section {
 	gap: 8px;
 }
 
+.brand-logo {
+	height: 42px;
+	width: auto;
+	display: block;
+}
+
+.hero-logo {
+	display: block;
+	height: 168px;
+	width: auto;
+	margin: 0 auto 28px;
+}
+
 .logo-text {
 	font-family: var(--font-title);
 	font-size: 22px;
 	font-weight: 800;
-	color: var(--white);
+	color: #737373;
 	letter-spacing: -0.5px;
-	background: linear-gradient(135deg, #ffffff 50%, var(--primary-color));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 .nav-menu {
@@ -190,9 +200,9 @@ section {
 }
 
 .lang-toggle-btn {
-	background: rgba(255, 255, 255, 0.05) !important;
-	color: var(--white) !important;
-	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	background: rgba(115, 115, 115, 0.06) !important;
+	color: #737373 !important;
+	border: 1px solid rgba(115, 115, 115, 0.22) !important;
 	padding: 10px 18px !important;
 	border-radius: 30px !important;
 	font-weight: 600 !important;
@@ -206,8 +216,8 @@ section {
 }
 
 .lang-toggle-btn:hover {
-	background: rgba(255, 255, 255, 0.12) !important;
-	border-color: rgba(255, 255, 255, 0.25) !important;
+	background: rgba(115, 115, 115, 0.12) !important;
+	border-color: rgba(115, 115, 115, 0.4) !important;
 	transform: translateY(-1px);
 }
 
@@ -286,9 +296,7 @@ section {
 	line-height: 1.15;
 	margin-bottom: 24px;
 	letter-spacing: -1.5px;
-	background: linear-gradient(135deg, #ffffff 40%, #cbd5e1 70%, var(--primary-color));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	color: #737373;
 }
 
 .hero-content p {
@@ -369,8 +377,8 @@ section {
 }
 
 .cta-secondary {
-	background: rgba(255, 255, 255, 0.03);
-	color: var(--white);
+	background: #ffffff;
+	color: #737373;
 	text-decoration: none;
 	padding: 14px 32px;
 	font-size: 16px;
@@ -504,11 +512,8 @@ section {
 	font-family: var(--font-title);
 	font-size: 28px;
 	font-weight: 800;
-	color: var(--white);
+	color: #737373;
 	margin: 16px 0 24px;
-	background: linear-gradient(135deg, #ffffff, var(--primary-color));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
 }
 
 .price-features {
@@ -765,7 +770,7 @@ section {
 }
 
 .contact-form-container {
-	background: rgba(0, 0, 0, 0.2);
+	background: #ffffff;
 	border: 1px solid var(--border);
 	border-radius: 20px;
 	padding: 36px;
@@ -791,7 +796,7 @@ section {
 
 .form-group input,
 .form-group textarea {
-	background: rgba(255, 255, 255, 0.02);
+	background: #ffffff;
 	border: 1px solid var(--border);
 	border-radius: 10px;
 	padding: 14px 16px;
@@ -1158,6 +1163,10 @@ section {
 		font-size: 38px;
 	}
 
+	.hero-logo {
+		height: 120px;
+	}
+
 	.hero-content p {
 		font-size: 16px;
 	}
@@ -1244,9 +1253,9 @@ section {
 
 /* Theme toggle */
 .theme-toggle-btn {
-	background: rgba(255, 255, 255, 0.05) !important;
-	color: var(--white) !important;
-	border: 1px solid rgba(255, 255, 255, 0.1) !important;
+	background: rgba(115, 115, 115, 0.06) !important;
+	color: #737373 !important;
+	border: 1px solid rgba(115, 115, 115, 0.22) !important;
 	width: 40px;
 	height: 40px;
 	border-radius: 50% !important;
@@ -1258,8 +1267,8 @@ section {
 }
 
 .theme-toggle-btn:hover {
-	background: rgba(255, 255, 255, 0.12) !important;
-	border-color: rgba(255, 255, 255, 0.25) !important;
+	background: rgba(115, 115, 115, 0.12) !important;
+	border-color: rgba(115, 115, 115, 0.4) !important;
 	transform: translateY(-1px);
 }
 
@@ -1278,21 +1287,21 @@ section {
 /* Light theme */
 [data-theme="light"] {
 	color-scheme: light;
-	--bg: #f6f7fb;
-	--bg-rgb: 246, 247, 251;
-	--panel: rgba(255, 255, 255, 0.8);
+	--bg: #ffffff;
+	--bg-rgb: 255, 255, 255;
+	--panel: rgba(220, 204, 182, 0.45);
 	--panel-opaque: #ffffff;
-	--text-color: #1e293b;
-	--muted: #64748b;
-	--white: #0f172a;
-	--border: rgba(15, 23, 42, 0.1);
-	--border-hover: rgba(15, 23, 42, 0.18);
-	--shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.15);
-	--primary-color: #8c6844;
-	--primary-rgb: 140, 104, 68;
-	--secondary-color: #6e5234;
-	--secondary-rgb: 110, 82, 52;
-	--on-primary: #fffaf6;
+	--text-color: #4f4f4f;
+	--muted: #737373;
+	--white: #737373;
+	--border: rgba(115, 115, 115, 0.18);
+	--border-hover: rgba(115, 115, 115, 0.36);
+	--shadow: 0 10px 30px -12px rgba(115, 115, 115, 0.28);
+	--primary-color: #737373;
+	--primary-rgb: 115, 115, 115;
+	--secondary-color: #5c5c5c;
+	--secondary-rgb: 92, 92, 92;
+	--on-primary: #ffffff;
 	--glow-shadow: 0 0 25px rgba(var(--primary-rgb), 0.12);
 }
 
@@ -1310,10 +1319,9 @@ section {
 [data-theme="light"] .hero-content h1,
 [data-theme="light"] .pricing .price,
 [data-theme="light"] .blog-header h1 {
-	background: linear-gradient(135deg, #0f172a 40%, var(--primary-color));
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
+	background: none;
+	-webkit-text-fill-color: #737373;
+	color: #737373;
 }
 
 [data-theme="light"] .lang-toggle-btn,
@@ -1370,4 +1378,12 @@ section {
 	display: block;
 	text-decoration: none;
 	color: inherit;
+}
+
+.hero-content h1,
+.pricing .price,
+.blog-header h1 {
+	background: none;
+	-webkit-text-fill-color: #737373;
+	color: #737373;
 }
