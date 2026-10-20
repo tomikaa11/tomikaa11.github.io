@@ -420,17 +420,6 @@ section {
 	color: var(--white);
 }
 
-.portfolio-preview h2 {
-	margin-bottom: 8px;
-}
-
-.portfolio-hint {
-	margin: 0;
-	color: var(--muted);
-	font-size: 13px;
-	text-align: center;
-}
-
 .portfolio-preview .products-grid {
 	margin-top: 28px;
 }
@@ -1122,12 +1111,6 @@ section {
 	.hero-subtitle {
 		margin-bottom: 20px;
 	}
-}
-
-.product-card-link {
-	display: block;
-	text-decoration: none;
-	color: inherit;
 }
 
 .hero-content h1,

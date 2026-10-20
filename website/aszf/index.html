@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁSZF | TT</title>
+    <meta name="description" content="A TT általános szerződési feltételei.">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="canonical" href="https://www.trefta.com/aszf/">
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        .doc-wrap {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .doc-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 24px;
+            background: var(--panel);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .doc-bar a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .doc-bar span {
+            font-family: var(--font-title);
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .doc-frame {
+            flex: 1;
+            width: 100%;
+            min-height: calc(100vh - 56px);
+            border: 0;
+            background: var(--bg);
+        }
+
+        .doc-fallback {
+            padding: 40px 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="doc-wrap">
+        <header class="doc-bar">
+            <a href="/">← Vissza</a>
+            <span>ÁSZF</span>
+            <a href="/aszf.pdf">Letöltés</a>
+        </header>
+        <object class="doc-frame" data="/aszf.pdf" type="application/pdf">
+            <p class="doc-fallback">A dokumentum itt nem jeleníthető meg. <a href="/aszf.pdf">Megnyitás PDF-ként</a></p>
+        </object>
+    </div>
+</body>
+</html>
