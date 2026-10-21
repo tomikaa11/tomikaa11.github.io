@@ -694,6 +694,7 @@ section {
 }
 
 .contact-item a {
+	display: block;
 	color: var(--primary-color);
 	text-decoration: none;
 	font-weight: 500;
