@@ -38,6 +38,7 @@ body {
 		radial-gradient(circle at 90% 80%, rgba(var(--secondary-rgb), 0.08) 0%, transparent 40%);
 	background-attachment: fixed;
 	overflow-x: hidden;
+	padding-top: 81px;
 }
 
 html {
@@ -93,8 +94,10 @@ section {
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
 	border-bottom: 1px solid var(--border);
-	position: sticky;
+	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 100;
 	transition: all 0.3s ease;
 }
@@ -858,6 +861,10 @@ section {
 @media (max-width: 1100px) {
 	html {
 		scroll-padding-top: calc(70px + env(safe-area-inset-top));
+	}
+
+	body {
+		padding-top: calc(71px + env(safe-area-inset-top));
 	}
 
 	.navbar {
