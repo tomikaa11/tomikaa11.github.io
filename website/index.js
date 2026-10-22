@@ -285,7 +285,7 @@ window.setLanguage = function(lang) {
     localStorage.setItem('siteLang', lang);
     document.documentElement.setAttribute('lang', lang);
 
-    // Update texts
+
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (translations[lang] && translations[lang][key]) {
@@ -293,7 +293,7 @@ window.setLanguage = function(lang) {
         }
     });
 
-    // Update placeholders
+
     document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
         const key = el.getAttribute('data-i18n-placeholder');
         if (translations[lang] && translations[lang][key]) {
@@ -301,7 +301,7 @@ window.setLanguage = function(lang) {
         }
     });
 
-    // Update toggle button text
+
     const langTextEl = document.querySelector('.lang-toggle-btn .lang-text');
     if (langTextEl) {
         langTextEl.textContent = lang === 'hu' ? 'EN' : 'HU';
@@ -313,7 +313,6 @@ window.toggleLanguage = function() {
     window.setLanguage(nextLang);
 };
 
-// Initial language setup
 const initLanguage = () => window.setLanguage(currentLang);
 
 if (document.readyState === 'loading') {

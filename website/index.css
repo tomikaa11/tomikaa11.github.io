@@ -374,16 +374,18 @@ section {
 .tools-track {
 	display: flex;
 	width: max-content;
-	animation: tools-scroll 40s linear infinite;
 }
 
 .tools-row {
 	list-style: none;
 	display: flex;
+	flex: 0 0 auto;
 	align-items: center;
 	gap: 48px;
+	padding-left: 0;
 	padding-right: 48px;
 	margin: 0;
+	animation: tools-scroll 40s linear infinite;
 }
 
 .tool {
@@ -406,17 +408,17 @@ section {
 
 @keyframes tools-scroll {
 	from { transform: translateX(0); }
-	to { transform: translateX(-50%); }
+	to { transform: translateX(-100%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.tools-track {
-		animation: none;
 		width: 100%;
 		justify-content: center;
 	}
 
 	.tools-row {
+		animation: none;
 		flex-wrap: wrap;
 		justify-content: center;
 		padding: 0 24px;
